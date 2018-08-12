@@ -20,7 +20,9 @@ Calculator.prototype = {
   },
 
   divide: function(number){
-    this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+    if(number === 0)
+    {this.runningTotal ="Please divide by a number other than 0."}
+    else {this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);}
   },
 
   numberClick: function(number) {
